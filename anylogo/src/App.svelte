@@ -37,7 +37,6 @@
   <title>Anylogo</title>
 </svelte:head>
 <h1>Anylogo</h1>
-<a href="https://clearbit.com">Logos provided by Clearbit</a>
 <p>needed to find logo of a website ? use Anylogo type in the url, download the logo !</p>
 <input type="text" bind:this={input} bind:value={url} on:keyup={handleEnter}>
 <button on:click={handleClick} class="button">Get Logo</button>
@@ -52,6 +51,7 @@
       </tr>
       <tr><td><a href="{value}" download="{current_url}.png" class="button">Download</a></td></tr>
     </table>
+    <a href="https://clearbit.com" style="display: block;text-align: center;">Logos provided by Clearbit</a>
   {/if}
 {/await}
 <style>
